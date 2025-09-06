@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: 'Druk Wide Cyr';
+  src: url('/fonts/drukwidecyr-super.woff2') format('woff2'),
+       url('/fonts/drukwidecyr-super.woff') format('woff'),
+       url('/fonts/drukwidecyr-super.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== CONFERENCE STYLES ===== */
+
+.druk-title-conference {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 0.9;
+  font-family: 'Druk Wide Cyr', sans-serif;
+  color: inherit;
+}
+
+.druk-title-section {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-family: 'Druk Wide Cyr', sans-serif;
+}
+
+.druk-title-card {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: 'Druk Wide Cyr', sans-serif;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Оптимизация для мобильных */
+@media (max-width: 768px) {
+  .druk-title-conference {
+    font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+    line-height: 0.9 !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: 0.02em !important;
+    font-family: 'Druk Wide Cyr', sans-serif !important;
+    font-weight: 800 !important;
+  }
+  
+  .druk-title-section {
+    font-size: 1.5rem;
+  }
+}
+
+/* Критические мобильные стили */
+@media (max-width: 480px) {
+  .druk-title-conference {
+    font-size: 2rem !important;
+    line-height: 0.9 !important;
+    letter-spacing: 0.02em !important;
+    margin-bottom: 1rem !important;
+    font-family: 'Druk Wide Cyr', sans-serif !important;
+    font-weight: 800 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .druk-title-conference {
+    font-size: 1.8rem !important;
+    font-family: 'Druk Wide Cyr', sans-serif !important;
+    font-weight: 800 !important;
+  }
+}
